@@ -33,24 +33,30 @@ function game(items){
     print(items);
     cellpc(items);
     ++c;
-    console.log("updated board");
+    console.log("After move of PC updated board");
     print(items)
     
     w=check(items)
     if(w==1)
        { 
-           console.log("PC wins")
+           console.log("Try next time.PC wins")
            break;
        }
+    
+    if(c>=9)
+    {
+        console.log("The game is over match is drawn")
+        break;
+    }
     console.log("Your turn now");
     celluser(items);
     ++c;
-    console.log("updated board");
+    console.log("After move of PC updated board");
     print(items)
     p=check(items)
     if(p==1)
        { 
-           console.log("you win")
+           console.log("yayyee you won")
            break;
        }
 

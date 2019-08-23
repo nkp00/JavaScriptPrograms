@@ -1,104 +1,56 @@
-/************************************************************************
- * @purpose :checking prime numbers and finding all the anagrams and palindromes
- * @file: anagramBL.js
- * @overview: Take a range of 0 - 1000 Numbers and find the Prime numbers in that range.
- * @author:Neeraj kr prajapati
- * @version: v8.15.0
- * @since: 21/08/2019
- */
-let c=0;
-arr=[];
-let flag=0;
-newarr=[];
-function check(x,y)
-{
-for(i=x;i<y;i++)
-{   
-    c=0;
-    for (j=2;j<i;j++)
-    {
-        if(i%j==0)      // checking if the number is divisible by any other number except 1 and itself
-        {
-            c++;
+/* c and c1 are two counter variables
+*  arr[] is an array where we are pushing all the prime numbers
+*  check is a function which is checking the prime number
+    and pushing that into the array arr
+*
+*/
+let c = 0;
+let c1 = 0
+arr = [];
+let flag = 0;
+newarr = [];
+ar4 = [];
+function check(N1, N2) {
+    for (i = N1; i < N2; i++) {
+        c = 0;
+        for (j = 2; j < i; j++) {
+            if (i % j == 0)      // checking if the number is divisible by any other number except 1 and itself
+            {
+                c++;
+            }
         }
-    }
-    if(c==0&&i>=2)
-    {
-        arr.push(i)   // printing the prime numbers
-    }
-}
-
-function anagram(arr)
-{
-    for(i in arr)
-    {
-        k=i+1
-        for(k in arr)
-        {
-                var num= arr[i].toString();
-                newarr=num.split('');
-                var num1= arr[k].toString();
-                newarr1=num1.split('');
-                for (j in newarr)
-                {
-                    if()
-                }
+        if (c == 0 && i >= 2) {
+            arr.push(i)   // printing the prime numbers
         }
+
     }
-
-
+    anagram(arr);
 
 }
 
-
-console.log("anagrams numbers are:")
-    for(i in arr)
-    {
-        //console.log(abc(arr[i]));
-        j=i+1;
-        for(j in arr)
-       {
-           //str=arr[i];
-           //console.log("rt");
-           //for( k in str)
-               //{
-                  // console.log("rt");
-                  var s=0;
-                  m=arr[i];
-                  while(m>0)
-                    {
-                        s=s+(m%10);
-                        m=Math.floor(m/10);
+function anagram(arr) {
+    for (i=0;i<arr.length;i++) {
+        c = 0;
+        ar4.push(arr[i]);
+        var num = arr[i].toString();
+        newarray = num.split("");
+        var num1 = arr[1+i].toString();
+        newarray1 = num1.split("");
+        for (k in newarray) {
+            //c=0;
+            
+            //for (j in arr) {
+                for (l in newarray1) {
+                    if (newarray[k] == newarray1[l])
                         c++;
-                        if(arr.includes(m))
-
-                            {
-                                flag++;
-                            }
-               
-                   }
-           if(flag==c)
-           {
-               console.log(arr[i],arr[j]);
-           }
-
+                }
+           // }
+            if ((c == newarray1.length) && (c == newarray.length))
+                ar4.push(num1);
+            else
+                ar4.pop();
         }
+        console.log(ar4);
     }
-
-
-
-return "";
 }
-
-function abc(m)
-{
-    var s=0;
-    while(m>0)
-    {
-        s=s+(m%10);
-        m=Math.floor(m/10);
-    }
-    return s;
-}
-
-module.exports ={check}
+module.exports = { check }
