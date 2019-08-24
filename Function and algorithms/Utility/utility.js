@@ -19,8 +19,8 @@ function findMynum(number) {
 function findnum(array1, s, l) {
     const input = require('readline-sync');
     m = parseInt((s + l) / 2)
-    if (l - s >0 && m>0) {
-         //m = parseInt((s+l) / 2)
+    if (l - s > 0 && m > 0) {
+        //m = parseInt((s+l) / 2)
         answer = input.question(`Is your number between ${s} and ${m}: Y/N :`);
         if (answer == "Y") {
             l = m;
@@ -76,17 +76,15 @@ function day(date, month, year) {
 
 function bubblesortstr(string1) {
 
-    var N=string1.length;
-    array1=string1.split("");
-    for(i=0;i<N;i++)
-    {
-        for (j=0;j<N;j++)
-        {
-            if(array1[j+1]<array1[j])          // comparing the adjacent element
+    var N = string1.length;
+    array1 = string1.split("");
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++) {
+            if (array1[j + 1] < array1[j])          // comparing the adjacent element
             {
-                temp=array1[j+1];
-                array1[j+1]=array1[j];         // interchanging the element
-                array1[j]=temp;
+                temp = array1[j + 1];
+                array1[j + 1] = array1[j];         // interchanging the element
+                array1[j] = temp;
             }
         }
     }
@@ -95,10 +93,53 @@ function bubblesortstr(string1) {
 
 }
 
+// Temperature conversion
+
+var f = 0;   // f is a variable storing temperature in Fahrenheit
+var c = 0;   // c is a variable storing temperature in celsius
+
+function convert(T, choice) {
+    f = T;
+    if (choice == 1) {
+        f = (c * 9 / 5) + 32;
+        console.log(`Temperature in Fahrenheit: ${f}`);
+    }
+    else if (choice == 2) {
+        c = (f - 32) * 5 / 9;
+        console.log(`Temperature in celsius: ${c}`);
+    }
+    else
+        console.log("You have enter a wrong input");
+    return "";
+}
+
+// monthly payment
+
+function pay(P, Y, R) {
+    var payment = 0;
+    n = 12 * Y;
+    r = (R / (12 * 100));
+    payment = ((P * r) / (1 - (Math.pow((1 + r), (-1 * n)))));
+    console.log(`Total monthly payment is ${payment}`);
+    return "";
+}
+
+// squreRoot using newtons method
+var t = 0;
+//var c = 0;
 
 
+function squareroot(c) {
+   // c = number;
+ // var epsilon = 10-15;
+    t = 0.0001;
+    //c=((c/t)+t)/2;
+    while (Math.abs(t*t - c) >= Math.pow(10,-15) )
+     { 
+         t = ((c / t) + t) / 2;
+     }
+    console.log(`square Root of ${c} is ${t}`);
+    return "";
+}
 
-
-
-
-module.exports ={findMynum,bubblesortstr,day}
+module.exports = { findMynum, bubblesortstr, day, convert, pay, squareroot }

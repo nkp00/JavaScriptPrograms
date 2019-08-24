@@ -7,7 +7,7 @@
  * @since: 22/08/2019
  */
 const input = require('readline-sync');
-const findingNumobject = require('../FindingNumber/findnumBL');
+const findingNumobject = require('../Utility/utility');
 let Number = input.questionInt("enter a number:");
 
 console.log(findingNumobject.findMynum(Number));
