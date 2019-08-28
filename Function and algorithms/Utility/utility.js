@@ -142,4 +142,31 @@ function squareroot(c) {
     return "";
 }
 
-module.exports = { findMynum, bubblesortstr, day, convert, pay, squareroot }
+
+// Decimal to binary
+array1=[];
+str=0;
+
+function binary(number)
+{
+    while(number>0)
+    {
+        c=number%2;
+        array1.unshift(c);
+        number=parseInt(number/2);
+    }
+    l=array1.length;
+    for(i=0;i<32-l;i++)
+    {
+        array1.unshift(0);
+    }
+    for(i=0;i<32;i++)
+    {
+        str=str+String(array1[i])
+    }
+
+    console.log(str);
+    return "";
+}
+
+module.exports = { findMynum, bubblesortstr, day, convert, pay, squareroot,binary }
