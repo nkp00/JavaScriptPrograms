@@ -5,7 +5,7 @@
 * s is a variable
 
 */
-
+/*
 array1 = [];
 let s = 0;
 function findMynum(number) {
@@ -54,7 +54,7 @@ program will take three command-line arguments: m (month), d (day), and y (year)
 For output print 0 for Sunday, 1 for Monday, 2 for Tuesday, and so forth.
 */
 
-
+/*
 function day(date, month, year) {
     d = date;
     m = month;
@@ -73,7 +73,7 @@ function day(date, month, year) {
 * bubblesortstr is a user defind fucntion which takes the original string and sort it
 * 
 */
-
+/*
 function bubblesortstr(string1) {
 
     var N=string1.length;
@@ -96,9 +96,71 @@ function bubblesortstr(string1) {
 }
 
 
+*/
 
 
 
 
+//module.exports ={findMynum,bubblesortstr,day}
+var element=0;
+function Linkedlist() {
+    this.head = null;
+}
 
-module.exports ={findMynum,bubblesortstr,day}
+Linkedlist.prototype.push=function(element)
+{
+    var node = {
+        value: element,
+        next: null
+    }
+    if (!this.head) {
+        this.head=node;
+    }
+    else{
+        currentnode=this.head;
+        while(currentnode.next)
+        {
+            currentnode=currentnode.next;
+        }
+        currentnode.next=node;
+    }
+}
+
+Linkedlist.prototype.pop=function()
+{
+    if(!this.head)
+    return "List is empty";
+    else
+    {
+        currentnode=this.head;
+       let previousnode=currentnode
+        while(currentnode.next)
+        {   
+            previousnode=currentnode
+            currentnode=currentnode.next;
+        }
+        previousnode.next=null;
+
+
+    }
+}
+Linkedlist.prototype.popf=function(){
+    if(!this.head)
+    return "Empty list";
+    else
+    {
+        currentnode=this.head;
+        this.head=currentnode.next;
+    }
+
+}
+
+var l=new Linkedlist()
+
+l.push(4);
+l.push(8);
+l.push(9);
+l.popf();
+l.push(7);
+console.log(l.head);
+

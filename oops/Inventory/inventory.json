@@ -1,0 +1,34 @@
+{
+    "Rice": {
+        "Basmati": {
+            "weight": 1,
+            "price": 100
+        },
+        "Normal": {
+            "weight": 1,
+            "price": 50
+        }
+    },
+    "Pulses": {
+        "Moong": {
+            "weight": 1,
+            "price": 80
+        },
+        "chana": {
+            "weight": 2,
+            "price": 100
+        }
+    },
+    "Wheat": {
+        "white":
+        {
+            "weight":1,
+            "price":50
+        },
+        "gray":
+        {
+            "weight":2,
+            "price":100
+        }
+    }
+}
