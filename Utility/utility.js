@@ -102,6 +102,7 @@ function bubblesortstr(string1) {
 
 
 //module.exports ={findMynum,bubblesortstr,day}
+/*
 var element=0;
 function Linkedlist() {
     this.head = null;
@@ -164,3 +165,18 @@ l.popf();
 l.push(7);
 console.log(l.head);
 
+*/
+
+
+const input = require('readline-sync');
+
+
+const nkp={
+    name:"xyz",
+    place:"varanasi",
+    age:"xy"
+}
+
+nkp.job="capg";
+
+console.log(nkp);
