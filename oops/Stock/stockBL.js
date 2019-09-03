@@ -1,5 +1,7 @@
-
-ar = [];
+/* calculate is fucntion which is calculating the price of shares.
+*  total is a function which calculates the total price of all the shares.
+*/
+array = [];                   // defining an array
 var sum=0;
 function Stock() {
 
@@ -7,8 +9,7 @@ function Stock() {
         this.name = name;
         //return Stock.name;
     }
-
-    this.setprice = function (price) {
+    this.setprice = function (price) {           // setting the name of the stack
         this.price = price;
     }
     this.number = function (number) {
@@ -17,24 +18,20 @@ function Stock() {
     this.get = function () {
         return this.name;
     }
-    // this.total=function(Portfolio)
-    // {
-    //     Stock.total=Portfolio.cal;
-    // }
 
 }
 
-function Portfolio(Stock) {
+function Portfolio(Stock) {                            // function to calculate the share price
 
-    this.cal = function (Stock) {
-        var s = (Stock.number * Stock.price);
-        ar.push(s)
-        return s;
+    this.calculate = function (Stock) {
+        var value= (Stock.number * Stock.price);        // calculating the share price
+        array.push(value)                               // pushing in a array to calculate the total share price
+        return value;
     }
     this.final=function()
     {   
-        for(i in ar)
-        sum=sum+ar[i];
+        for(i in array)
+        sum=sum+array[i];
         return sum;
     }
 }

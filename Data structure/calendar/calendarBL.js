@@ -13,8 +13,8 @@ var calMonth = (month, year) => {
     if (array1.includes(m))
         max = 31;
     else
-        max=30;    
-    if(m==2){
+        max = 30;
+    if (m == 2) {
         if (leap(y))
             max = 29;
         else
@@ -31,14 +31,12 @@ var calMonth = (month, year) => {
         d0 = ((d + x + parseInt(31 * m0 / 12)) % 7);
         //console.log(d0);
         if (d0 == 6) {
-        ar[k][d0] = d;
+            ar[k][d0] = d;
             k = k + 1;
         }
         else {
             ar[k][d0] = d;
         }
-
-
     }
     console.table(ar);
 }

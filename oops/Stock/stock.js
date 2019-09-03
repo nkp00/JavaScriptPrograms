@@ -1,27 +1,28 @@
 /************************************************************************
  * @purpose :binary search
- * @file: binaryIntBL.js
- * @overview: taking an sorted array and searching for an element using binary search algorithm
+ * @file: stockBL.js
+ * @overview: Write a program to read in Stock Names, Number of Share, Share Price. Print a Stock Report with total value of each Stock and the total value of Stock.
+
  * @author:Neeraj kr prajapati
  * @version: v8.15.0
- * @since: 22/08/2019
+ * @since: 31/08/2019
  */
 const input = require('readline-sync');
 const stockobject = require('../Stock/stockBL');
 let number=input.questionInt("Enter the number of stock:");
-var p= new stockobject.Portfolio(l);
+var portfolio= new stockobject.Portfolio(stock);
 
 for (let i=0;i<number;i++){
 let stockName= input.question("enter the name of stock:");
 let shareNumber=input.questionInt("Enter the number of shares:");
 let price=input.questionInt("enter the share price :");
-var l=new stockobject.Stock();
+var stock=new stockobject.Stock();
 
 
-l.setname(stockName);
-l.number(shareNumber);
-l.setprice(price);
+stock.setname(stockName);
+stock.number(shareNumber);
+stock.setprice(price);
 //console.log(l.name);
-console.log(`value=${p.cal(l)}`);
+console.log(`value=${portfolio.calculate(stock)}`);
 }
-console.log(`Total value=${p.final(l)}`);
+console.log(`Total value=${portfolio.final(stock)}`);

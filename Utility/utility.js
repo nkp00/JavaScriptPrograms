@@ -167,7 +167,7 @@ console.log(l.head);
 
 */
 
-
+/*
 const input = require('readline-sync');
 
 
@@ -179,4 +179,39 @@ const nkp={
 
 nkp.job="capg";
 
-console.log(nkp);
+console.log(nkp);*/
+
+deck={
+    suit:["c","d","h","s"],
+    rank:["2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"]
+}
+var ar=[];
+for(let i in deck.suit){
+for(let j in deck.rank)
+ar.push(` ${deck.rank[j]} of ${deck.suit[i]} `);}
+
+//console.log(ar);
+var m= ar.length;
+for(let i in ar){
+var n=Math.floor(Math.random()*10);
+//console.log(i);
+temp=ar[i];
+ar[i]=ar[n];
+ar[n]=temp;
+}
+array=[];
+for(i=0;i<4;i++)
+{
+    array[i]=new Array(9);
+}
+
+//console.log(ar);
+
+for(let i in array)
+{
+    for (let j in array)
+    {
+        array[i][j]=ar.pop();
+    }
+}
+console.table(array);
