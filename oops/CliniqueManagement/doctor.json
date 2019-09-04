@@ -1,0 +1,28 @@
+[
+    {
+        "name":"a",
+         "Id" :"1",
+         "Specialization":"eye",
+         "Availability" :"AM"
+    },
+    {          
+        "name":"b",
+        "Id" :"2",
+        "Specialization":"ear",
+        "Availability" :"AM"
+
+    },
+    {
+        "name":"c",
+         "Id" :"3",
+         "Specialization":"head",
+         "Availability" :"PM"
+    },
+    {
+        "name":"d",
+         "Id" :"4",
+         "Specialization":"heart",
+         "Availability" :"PM"
+    }
+
+]

@@ -103,6 +103,7 @@ function bubblesortstr(string1) {
 
 //module.exports ={findMynum,bubblesortstr,day}
 /*
+
 var element=0;
 function Linkedlist() {
     this.head = null;
@@ -181,37 +182,110 @@ nkp.job="capg";
 
 console.log(nkp);*/
 
+
+// Deck of cards
+/*
 deck={
-    suit:["c","d","h","s"],
+    suit:["♣","♦","♥","♠ "],
     rank:["2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"]
 }
 var ar=[];
 for(let i in deck.suit){
 for(let j in deck.rank)
 ar.push(` ${deck.rank[j]} of ${deck.suit[i]} `);}
-
-//console.log(ar);
+ar.sort();
+console.log(ar);
+/*
 var m= ar.length;
 for(let i in ar){
 var n=Math.floor(Math.random()*10);
-//console.log(i);
 temp=ar[i];
 ar[i]=ar[n];
 ar[n]=temp;
 }
-array=[];
-for(i=0;i<4;i++)
+var array=[];
+for(i=0;i<9;i++)
 {
-    array[i]=new Array(9);
+    array[i]=[];
 }
-
-//console.log(ar);
-
-for(let i in array)
-{
-    for (let j in array)
+for( let j=0;j<9;j++)
+{  
+    for (let i=0;i<4;i++)
     {
-        array[i][j]=ar.pop();
+        array[j][i]=ar.pop();
     }
 }
 console.table(array);
+
+*/
+
+// Queue using linked list
+/*
+var element=0;
+function Linkedlist() {
+    this.head = null;
+}
+var front=null;
+var rear=null;
+
+Linkedlist.prototype.push=function(element)
+{
+    var node = {
+        value: element,
+        next: null
+    }
+    if (!this.head) {
+        this.head=node;
+        front=node;
+        rear=node;
+
+    }
+    else{
+        currentnode=this.head;
+        while(currentnode.next)
+        {
+            currentnode=currentnode.next;
+        }
+        currentnode.next=node;
+        rear=rear.next;
+    }
+}
+
+Linkedlist.prototype.pop=function()
+{
+    if((this.head==null)||(front==rear&&front.next!=null)){
+        console.log("List is empty");
+    return "";
+    }
+    else
+    {
+        var x=front.value
+      //  console.log(front.value);
+        this.head=front.next;
+        front=this.head;
+    }
+    return x;
+}
+
+var queue=new Linkedlist()
+
+queue.push(4);
+queue.push(8);
+queue.push(9);
+//l.popf();
+//l.push(7);
+queue.pop();
+//l.pop();
+queue.push(10);
+//var y=l.pop();
+console.log(queue);
+//console.log(y);
+*/
+
+
+var x=10
+if(x==10){
+     var x=20
+    console.log(x);
+}
+console.log(x);
