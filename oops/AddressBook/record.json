@@ -1,0 +1,30 @@
+[
+    {
+        "FirstName": "argha",
+        "LastName": " boksi",
+        "Adress": " Rampur",
+        "City": "Kolkata",
+        "State": "West Bengal",
+        "Zip": 221208,
+        "PhoneNumber": 8936274638
+    },
+    {
+        "FirstName": "shirin",
+        "LastName": " shah",
+        "Adress": " Rahimpur",
+        "City": "Kolkata",
+        "State": "West Bengal",
+        "Zip": 221210,
+        "PhoneNumber": 8466274690
+    },
+    {
+        "FirstName": "Anik",
+        "LastName": " Mondal",
+        "Adress": " Durgapur",
+        "City": "Varanasi",
+        "State": "Uttar Pradesh",
+        "Zip": 713209,
+        "PhoneNumber": 952627898
+    }
+
+]

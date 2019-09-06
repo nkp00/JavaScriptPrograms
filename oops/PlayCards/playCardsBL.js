@@ -62,9 +62,6 @@ var suffle = () => {
              deck:data
          }
     }
-
-
-
 var element = 0;
 function Linkedlist() {
     this.head = null;

@@ -11,7 +11,7 @@
  * @since: 03/09/2019
  */
 
-  const input=require("readline-sync");
+const input=require("readline-sync");
 const cardobject=require("../DeckOfCards/cardBL");
 
 console.log(cardobject.suffle());

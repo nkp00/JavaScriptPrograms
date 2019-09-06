@@ -283,9 +283,59 @@ console.log(queue);
 */
 
 
-var x=10
-if(x==10){
-     var x=20
-    console.log(x);
+
+
+
+// Rough work
+
+
+
+
+const input=require("readline-sync");
+
+object2={
+    FirstName:"abc",
+    LastName:"dcf",
+    City:"varanasi"
 }
-console.log(x);
+
+// object1=[{},{},{}]
+// var array=["tName","lastName","City"]
+// for(i in array){
+// object1[i][array[i]]=input.question(`Enter your ${array[i]}:`);}
+
+var object3={ FirstName:"",LastName:"",Address:"",City:"",State:"",Zip:"",PhoneNumber:""}
+
+object3.FirstName=09080;
+console.log"LastName": " shah",
+    //     "Adress": " Rahimpur",
+    //     "City": "Kolkata",
+    //     "State": "West Bengal",
+    //     "Zip": 221210,
+    //     "PhoneNumber": 8466274690
+    // },
+    // {
+    //     "FirstName": "Anik",
+    //     "LastName": " Mondal",
+    //     "Adress": " Durgapur",
+    //     "City": "Varanasi",
+    //     "State": "Uttar Pradesh",
+    //     "Zip": 713209,
+    //     "PhoneNumber": 952627898(object3[2]);
+    {
+        "FirstName": "shirin",
+        "LastName": " shah",
+        "Adress": " Rahimpur",
+        "City": "Kolkata",
+        "State": "West Bengal",
+        "Zip": 221210,
+        "PhoneNumber": 8466274690
+    },
+    {
+        "FirstName": "Anik",
+        "LastName": " Mondal",
+        "Adress": " Durgapur",
+        "City": "Varanasi",
+        "State": "Uttar Pradesh",
+        "Zip": 713209,
+        "PhoneNumber": 952627898

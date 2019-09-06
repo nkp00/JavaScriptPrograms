@@ -4,8 +4,12 @@ search the doctor by by Name, Id, Specialization and Availability
 * searchPatient is a fucntion which takes argument the list of doctor and 
 search the doctor by by Name, Id, Specialization and Availability
 
+* Appointment is a function which takes patient and doctors as argument and check if doctor is free 
+if yes then books an appointment.
 
+* Popular is fucntion which takes doctor as argument and finds out who is the most popular doctor
 */
+
 const input = require("readline-sync");
 var searchDoctor = (doctor) => {
     var n = input.questionInt("1.Search by name:\n2.search by Id:\n3.Search by speciality;\n4.Search by Availbility:\n")
@@ -48,7 +52,7 @@ var searchDoctor = (doctor) => {
     }
 }
 
-var searchPatient=(patient)=>{
+var searchPatient = (patient) => {
     var n = input.questionInt("1.Search by name:\n2.search by Id:\n3.Search by Mobile number;\n4.Search by Age:\n")
     switch (n) {
         case 1:
@@ -89,36 +93,33 @@ var searchPatient=(patient)=>{
     }
 }
 
-var appointment=(doctor,patient)=>{
+var appointment = (doctor, patient) => {
 
-    let name=input.question("Enter the patient name:");
-    for(let i in patient){
-        if(name==patient[i].name)
-        var c=patient[i].name;
+    let name = input.question("Enter the patient name:");
+    for (let i in patient) {
+        if (name == patient[i].name)
+            var c = patient[i].name;
     }
-    let doc= input.question("Enter the name of the docotor: ");
-    for(let i in doctor )
-        {
-            if((doc==doctor[i].name)&&doctor[i].patientQueue .length<5)
-            {
-                console.log(`your appointment is booked with Dr.${doc}`);
-                doctor[i].patientQueue .push(c)
-                console.log(doctor[i]);
+    let doc = input.question("Enter the name of the docotor: ");
+    for (let i in doctor) {
+        if ((doc == doctor[i].name) && doctor[i].patientQueue.length < 5) {
+            console.log(`your appointment is booked with Dr.${doc}`);
+            doctor[i].patientQueue.push(c)
+            console.log(doctor[i]);
 
-            }
         }
-    } 
+    }
+}
 
-var popular=(doctor)=>{
+var popular = (doctor) => {
 
-    var c=0;
+    var c = 0;                        // c is a temporary variable to store the patient Queue
     var name;
-    for (let i in doctor)
-    {
+    for (let i in doctor) {
         //c=doctor[i].patientQueue.length;
-        if(c<=doctor[i].patientQueue.length){
-            c=doctor[i].patientQueue.length;
-            name=doctor[i].name;
+        if (c <= doctor[i].patientQueue.length) {
+            c = doctor[i].patientQueue.length;
+            name = doctor[i].name;
         }
     }
     console.log(`Most popular doctor is Dr.${name}`);
@@ -126,4 +127,4 @@ var popular=(doctor)=>{
 
 
 
-module.exports = { searchDoctor,searchPatient,appointment,popular}
+module.exports = { searchDoctor, searchPatient, appointment, popular }
