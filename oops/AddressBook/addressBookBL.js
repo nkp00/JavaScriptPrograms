@@ -127,7 +127,7 @@ var save = (record) => {
             fs.writeFileSync("../AddressBook/savedBook.json", JSON.stringify(remove(savedBook)));
             break;
         case 3:
-            fs.writeFileSync("../AddressBook/savedBook.json", JSON.stringify(update(savedBook)));
+            fs.writeFileSync("../AddressBook/savedBook.json", JSON.stringify(update(savedBook))); // writing in the file after updating
             break;
         case 4:
             display(savedBook);

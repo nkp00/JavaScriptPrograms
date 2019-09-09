@@ -1,6 +1,11 @@
+/* replace1 is a fucntion which takes the string as argument and replaces the word(string)
+ with desired string.
+*/
+
+
 var replace1=(items) =>{
 
-   var items1;
+   var items1;              // items1, items2,items3 are 3 variables to store the string.
    var items2;
    var items3;
     items1=items.replace(/<<name>>/,'Neeraj');
