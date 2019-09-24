@@ -1,4 +1,9 @@
+/*
+getTime is a fucntion which return the current date and time
+buy is a fucntion which takes buyerArray and companyArray and argument and update the number of shares.
+sell is a fucntion which takes buyerArray and companyArray and argument and update the number of shares.
 
+*/
 const input = require("readline-sync");
 var count = 0;
 var array = [];
@@ -26,7 +31,7 @@ var buy = (buyerArray, companyArray) => {
             }
         }
     }
-    if (count == 0) {
+    if (count == 0) {                                           // counter 
         console.log("company don't have enough share");
         count = 0;
         return "";

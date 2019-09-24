@@ -3,7 +3,7 @@
 
 var calculate = (inventory) => {
     var total = sum(inventory);
-   // console.log(total);
+    // console.log(total);
     return total;
 }
 
@@ -12,11 +12,11 @@ var sum = (inventory) => {
     for (let i in inventory) {
         var summation = 0;
         for (let j in inventory[i])
-            summation+= inventory[i][j].weight* inventory[i][j].price;
+            summation += inventory[i][j].weight * inventory[i][j].price;
         str[i] = summation;
     }
     return str;
 
 }
 
-module.exports={calculate}
+module.exports = { calculate }

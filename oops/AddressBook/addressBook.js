@@ -20,7 +20,7 @@ var choice1 = input.questionInt("1.create a new address Book\n2.open\n3.save\n4.
 
 switch (choice1) {
     case 1:
-        var book = ddressBookobject.create();
+        var book = addressBookobject.create();
         fs.writeFileSync("../AddressBook/NewBook.json", JSON.stringify(book));
         break;
     case 2:

@@ -12,7 +12,7 @@ const inventoryManagementobject = require('../InventoryManagement/InventoryManag
 const fs = require('fs')
 var items = fs.readFileSync("../InventoryManagement/InventoryManagement.json");  // reading the input JSON file
 var dataArray = JSON.parse(items);
-var total=inventoryManagementobject.calculate(dataArray)
+var total = inventoryManagementobject.calculate(dataArray)
 
 fs.writeFileSync("../InventoryManagement/output.json", JSON.stringify(total)); // writing in output file
 

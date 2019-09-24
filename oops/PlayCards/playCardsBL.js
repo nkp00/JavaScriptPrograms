@@ -18,50 +18,48 @@ var suffle = () => {
     //queue.pop();
 
     // print(deckSuffle(array1));
-   // console.log(queue);
+    // console.log(queue);
     suffleDeck(queue);
     //console.log(queue);
 
     return "";
 }
 
-    var suffleDeck = (queue) => {
+var suffleDeck = (queue) => {
 
-        currentnode=queue.head;
-        //console.log(currentnode.next);
-         while (currentnode.next)
-        {
-           let temp=queue.head;
-            let n=Math.floor(Math.random() * 10); 
-            for(let i=0;i<=n;i++)
-            {
-                temp=temp.next;
-            }
-            let tempElement=currentnode.value;
-            currentnode.value=temp.value;
-            temp.value=tempElement;
-            currentnode=currentnode.next;
+    currentnode = queue.head;
+    //console.log(currentnode.next);
+    while (currentnode.next) {
+        let temp = queue.head;
+        let n = Math.floor(Math.random() * 10);
+        for (let i = 0; i <= n; i++) {
+            temp = temp.next;
         }
-        console.log(queue);
+        let tempElement = currentnode.value;
+        currentnode.value = temp.value;
+        temp.value = tempElement;
+        currentnode = currentnode.next;
     }
-    player={
+    console.log(queue);
+}
+player = {
 
-        player1={
-                deck:data
-        },
+    player1={
+        deck: data
+    },
 
-        player2={
-                deck:data
-        },
+    player2={
+        deck: data
+    },
 
-        player3={
-            deck:data
-        },
+    player3={
+        deck: data
+    },
 
-         player4={
-             deck:data
-         }
+    player4={
+        deck: data
     }
+}
 var element = 0;
 function Linkedlist() {
     this.head = null;
